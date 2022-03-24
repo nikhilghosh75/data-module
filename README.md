@@ -4,6 +4,6 @@ A standalone module for managing data, including .csv files, in Unity. Written b
 Current plans include:
 - Support for dates and times
 - Support for parsing scientific notation
-- XLSX Parsing
+- XLSX Parsing (including ZIP file parsing)
 - Easy API for accessing a range of datatable values
 - Excel-like functions for analyzing datatables
