@@ -129,5 +129,26 @@ namespace Data
             }
             return null;
         }
+
+        public IEnumerable<object> Range(int startRow, int startColumn, int endRow, int endColumn)
+        {
+            if (startRow < 0)
+                startRow = 0;
+            if (endRow >= RowCount)
+                endRow = RowCount - 1;
+
+            if (startColumn < 0)
+                startColumn = 0;
+            if (endColumn >= ColumnCount)
+                endColumn = ColumnCount - 1;
+
+            for (int i = startColumn; i < endColumn; i++)
+            {
+                for(int j = startRow; j < endRow; j++)
+                {
+                    yield return columns[i].data[j];
+                }
+            }
+        }
     }
 }
